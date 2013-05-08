@@ -1,3 +1,6 @@
 [submodule "wp"]
 	path = wp
 	url = git://github.com/WordPress/WordPress.git
+[submodule "nginx"]
+	path = nginx
+	url = https://gist.github.com/5453562.git
