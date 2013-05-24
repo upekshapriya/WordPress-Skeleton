@@ -11,6 +11,7 @@ if ( file_exists( dirname( __FILE__ ) . '/local-config.php' ) ) {
 	define( 'DB_USER', '%%DB_USER%%' );
 	define( 'DB_PASSWORD', '%%DB_PASSWORD%%' );
 	define( 'DB_HOST', '%%DB_HOST%%' ); // Probably 'localhost'
+	define( 'DOMAIN_CURRENT_SITE', '%%DOMAIN%%' );
 }
 
 // ========================
@@ -29,14 +30,14 @@ define( 'DB_COLLATE', '' );
 // Salts, for security
 // Grab these from: https://api.wordpress.org/secret-key/1.1/salt
 // ==============================================================
-define( 'AUTH_KEY',         'put your unique phrase here' );
-define( 'SECURE_AUTH_KEY',  'put your unique phrase here' );
-define( 'LOGGED_IN_KEY',    'put your unique phrase here' );
-define( 'NONCE_KEY',        'put your unique phrase here' );
-define( 'AUTH_SALT',        'put your unique phrase here' );
-define( 'SECURE_AUTH_SALT', 'put your unique phrase here' );
-define( 'LOGGED_IN_SALT',   'put your unique phrase here' );
-define( 'NONCE_SALT',       'put your unique phrase here' );
+define('AUTH_KEY',         '2a/y%{JkmMROzEXJ{?P`f7q&W$3[|#v<T3j-W0sNx#`P>-4<&U{[FF`RhCH|`8(|');
+define('SECURE_AUTH_KEY',  '|HJ2_}rSs(LF!*GMNP:.M$:sRd)oe<VCc`JTY-e|@@{g5[f`bD<cnW#zz||$V*MX');
+define('LOGGED_IN_KEY',    'tyK;V;X{O#HF|&_4(b-TRi!?}$xuGFFUNB.BiE+VsylXj}UD3Je!}+yzEox<~d_J');
+define('NONCE_KEY',        'i<z5c|ND)Rr-}h;v)H6<; )HgL+<&LYUf_T[LGh|~BAJ,Yh{Ha-e#F|.CYN*dsL%');
+define('AUTH_SALT',        'B5&;I%)Q2qB7Ey+zBv&j+u;)Ut*+~g<0i^1G}1fA62vNehAms~6#nm0%{Yj+|cr=');
+define('SECURE_AUTH_SALT', 'D#%*y=ly//AEu)eZ!fBnogM3qW@UX!J+a|Q[S=(E#%RcI4{Lu1&c(F^TP(`jA@pw');
+define('LOGGED_IN_SALT',   '6JB+Uvgm<73^5a.wx&JZ|(t*wSc|gujr*%ZE-`d)y@S@i2f$kI|lUDidD;D^n1OQ');
+define('NONCE_SALT',       '<1<vAg|]r@lhqX@%l;;AQ%RcB-+UpkG-.iyBljYG4PdP^hfrRAAz+ABrEys^#|G|');
 
 // ==============================================================
 // Table prefix
@@ -74,6 +75,15 @@ if ( file_exists( dirname( __FILE__ ) . '/memcached.php' ) )
 // ===========================================================================================
 define( 'WP_STAGE', '%%WP_STAGE%%' );
 define( 'STAGING_DOMAIN', '%%WP_STAGING_DOMAIN%%' ); // Does magic in WP Stack to handle staging domain rewriting
+
+define('WP_ALLOW_MULTISITE', true);
+define( 'MULTISITE', true );
+define( 'SUBDOMAIN_INSTALL', true );
+$base = '/';
+define( 'PATH_CURRENT_SITE', '/' );
+define( 'SITE_ID_CURRENT_SITE', 1 );
+define( 'BLOG_ID_CURRENT_SITE', 1 );
+define( 'SUNRISE', 'on' );
 
 // ===================
 // Bootstrap WordPress
